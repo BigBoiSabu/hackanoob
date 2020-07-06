@@ -5,7 +5,7 @@ require 'classes/Session.class.php';
 require 'classes/System.class.php';
 
 
-
+//HG was here
 //$session = new Session();
 $loadFacebook = FALSE;
 $loadTwitter = FALSE;
