@@ -47,10 +47,10 @@ if(!isset($_SESSION['id'])){
                 $appID = 0;
                 $appSecret = 'REDACTED';
                 break;
-            case 'http://hackanoob.net/':
+            /*case 'http://hackanoob.net/':
                 $appID = 0;
                 $appSecret = 'REDACTED';
-                break;
+                break;*/
         }
                 
         $facebook = new Facebook(array(
