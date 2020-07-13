@@ -554,11 +554,11 @@ if (ini_get("session.use_cookies")) {
             return 'en_US';
         }
         
-        if($_SERVER['HTTP_HOST'] == 'localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.localhost:3000'){
+        if($_SERVER['HTTP_HOST'] == '192.168.8.68:4000' || $_SERVER['HTTP_HOST'] == 'www.192.168.8.68:4000'){
             return 'en_US';
         }
         
-        if($_SERVER['HTTP_HOST'] == 'br.localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.br.localhost:3000'){
+        if($_SERVER['HTTP_HOST'] == 'br.192.168.8.68:4000' || $_SERVER['HTTP_HOST'] == 'www.br.192.168.8.68:4000'){
             return 'pt_BR';
         }
         
