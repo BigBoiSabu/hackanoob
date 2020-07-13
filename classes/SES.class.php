@@ -28,7 +28,7 @@ class SES {
         
         $msg = array();
         
-        $msg['Source'] = "Hacker Experience <contact@hackerexperience.com>";
+        $msg['Source'] = "Hacker Experience <contact@hackanoob.net>";
         $msg['Destination']['ToAddresses'][] = $info['to'];
 
         $msg['Message']['Subject']['Charset'] = "UTF-8";
@@ -48,7 +48,7 @@ class SES {
                 
                 $body_html = $html;
                 
-                $text = str_replace('</form>', '<br/>'._('Proceed to ').'http://hackerexperience.com/welcome?code='.$info['key'], $html);
+                $text = str_replace('</form>', '<br/>'._('Proceed to ').'http://hackanoob.net/welcome?code='.$info['key'], $html);
 
                 $body_text = strip_tags($text);
               

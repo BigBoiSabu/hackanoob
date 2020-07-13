@@ -1186,8 +1186,8 @@ msgstr "Agradecimentos especiais"
 msgid "You should be here?"
 msgstr "Você devia estar aqui?"
 
-msgid "contact@hackerexperience.com"
-msgstr "contato@hackerexperience.com"
+msgid "contact@hackanoob.net"
+msgstr "contato@hackanoob.net"
 
 msgid "Contact us"
 msgstr "Entre em contato"
@@ -1603,8 +1603,8 @@ msgstr "<a href=\"http://duartes.org/gustavo/blog/post/first-recorded-usage-of-h
 msgid "Regardless of definition, we want our users to enjoy the game, whether they call it Hacker or Cracker Experience. That's it, name whatever you want."
 msgstr "Independente de definição, nós queremos que nossos usuários curtam o jogo, prefiram eles Hacker ou Cracker Experience. É isso, chame do que você quiser."
 
-msgid "Meanwhile, we have a special <a href=\"https://forum.hackerexperience.com/\">board designated to teach computer science and programming</a> for people. Instead of engaging into useless flame wars, feel free to join and share your knowledge to others. I'd call <em>that</em> hacker :)"
-msgstr "Enquanto isso, nós temos um <a href=\"https://forum.hackerexperience.com/\">fórum especial com o objetivo de ensinar ciência da computação e programação</a> para usuários. Em vez de participar de flame wars inúteis, sinta-se à vontade para entrar e compartilhar seu conhecimento com outros. Eu chamaria <em>isso</em> de hacker :)"
+msgid "Meanwhile, we have a special <a href=\"https://forum.hackanoob.net/\">board designated to teach computer science and programming</a> for people. Instead of engaging into useless flame wars, feel free to join and share your knowledge to others. I'd call <em>that</em> hacker :)"
+msgstr "Enquanto isso, nós temos um <a href=\"https://forum.hackanoob.net/\">fórum especial com o objetivo de ensinar ciência da computação e programação</a> para usuários. Em vez de participar de flame wars inúteis, sinta-se à vontade para entrar e compartilhar seu conhecimento com outros. Eu chamaria <em>isso</em> de hacker :)"
 
 msgid "So, what are you waiting?"
 msgstr "Então, o que você está esperando?"
@@ -1636,8 +1636,8 @@ msgstr "Feito no Brasil"
 msgid "Terms of Service"
 msgstr "Termos de Serviço"
 
-msgid "By using Hacker Experience, a service provided by NeoArt Labs, you are agreeing to be bound by the following terms and conditions.  Violation of any of the terms of service which are stated below will result in temporary or permanent termination of your account. If you do not agree with any of these terms, you must not use Hacker Experience or any subdomain within www.hackerexperience.com."
-msgstr "Ao usar Hacker Experience, um serviço fornecido por NeoArt Labs, você concorda em seguir os seguintes termos e condições. Violações de qualquer um dos termos de serviço listados abaixo irá resultar em terminação temporária ou permanente da sua conta. Se você não concorda com algum desses termos, você não deve usar Hacker Experience ou qualquer subdomínio dentro de www.hackerexperience.com."
+msgid "By using Hacker Experience, a service provided by NeoArt Labs, you are agreeing to be bound by the following terms and conditions.  Violation of any of the terms of service which are stated below will result in temporary or permanent termination of your account. If you do not agree with any of these terms, you must not use Hacker Experience or any subdomain within www.hackanoob.net."
+msgstr "Ao usar Hacker Experience, um serviço fornecido por NeoArt Labs, você concorda em seguir os seguintes termos e condições. Violações de qualquer um dos termos de serviço listados abaixo irá resultar em terminação temporária ou permanente da sua conta. Se você não concorda com algum desses termos, você não deve usar Hacker Experience ou qualquer subdomínio dentro de www.hackanoob.net."
 
 msgid "You agree"
 msgstr "Você concorda"
@@ -1732,8 +1732,8 @@ msgstr "mudanças nos preços das Contas Premium afetará somente novas compras 
 msgid "Account termination"
 msgstr "Terminação da conta"
 
-msgid "Currently, the only way to cancel your account is by requesting it manually to contact@hackerexperience.com."
-msgstr "Atualmente, a única forma de cancelar sua conta é fazendo uma requisiçao para contato@hackerexperience.com."
+msgid "Currently, the only way to cancel your account is by requesting it manually to contact@hackanoob.net."
+msgstr "Atualmente, a única forma de cancelar sua conta é fazendo uma requisiçao para contato@hackanoob.net."
 
 msgid "If you are a recurring-paying premium member, you will not be billed after your account is terminated."
 msgstr "Se você é um membro Premium pagando em mensalidades, você não será cobrado após sua conta ser terminada."
@@ -1822,8 +1822,8 @@ msgstr "Piwik - <a href=\"http://piwik.org\">Piwik</a> é uma plataforma analít
 msgid "New Relic - New Relic provides better statistics regarding page load and application aspects. No personal-identifying information is collected."
 msgstr "New Relic - New Relic provê melhores estatísticas no que tange a carregamento de páginas e aspectos de aplicação. Nenhuma informação pessoal é coletada."
 
-msgid "Cookies - We use cookies to enable a more personal experience on the game. We do not track other sites than hackerexperience.com. Hacker Experience might not work without cookies."
-msgstr "Cookies - Nós usamos cookies para permitir uma experiência mais pessoal do jogo. Nós não rastreamos outros sites além de hackerexperience.com. Hacker Experience pode não funcionar corretamente sem cookies."
+msgid "Cookies - We use cookies to enable a more personal experience on the game. We do not track other sites than hackanoob.net. Hacker Experience might not work without cookies."
+msgstr "Cookies - Nós usamos cookies para permitir uma experiência mais pessoal do jogo. Nós não rastreamos outros sites além de hackanoob.net. Hacker Experience pode não funcionar corretamente sem cookies."
 
 msgid "Google Adsense - Google Ads help keep Hacker Experience free."
 msgstr "Google Adsense - Google Ads ajuda a manter Hacker Experience gratuito."
@@ -1864,8 +1864,8 @@ msgstr "Usuários podem optar por sair do programa do DoubleClick de propaganda 
 msgid "Please note"
 msgstr "Por favor note"
 
-msgid "The use of the site constites your full acceptance of our Privacy Policy. If you do not agree with it, please refrain from using www.hackerexperience.com and all related domains."
-msgstr "O uso do site constitui sua completa aceitação da nossa Política de Privacidade. Se você não concorda com ela, por favor abstenha-se de usar www.hackerexperience.com e todos os domínios relacionados."
+msgid "The use of the site constites your full acceptance of our Privacy Policy. If you do not agree with it, please refrain from using www.hackanoob.net and all related domains."
+msgstr "O uso do site constitui sua completa aceitação da nossa Política de Privacidade. Se você não concorda com ela, por favor abstenha-se de usar www.hackanoob.net e todos os domínios relacionados."
 
 msgid "We may change our privacy policy from time to time. Although efforts will be made to announce any changes on the Forum Announcements Board, we may do so in our sole discretion. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change. Therefore, we encourage you to visit this page regularly."
 msgstr "Nós podemos alterar nossa política de privacidade de tempos em tempos. Embora esforços serão feitos para publicar qualquer alteração no Quadro de Anúncios do Fórum, nós podemos realizar a alteração sem prévio aviso. A continuação do uso do site após qualquer alteração nessa Política de Privacidade constitui sua aceitação de tais mudanças. Portanto, nós recomendamos que você visite essa página regularmente."
@@ -2675,8 +2675,8 @@ msgstr "Vocẽ não pode resetar sua senha agora."
 msgid "Not enough money."
 msgstr "Sem dinheiro suficiente."
 
-msgid "There already is a payment of yours being processed. For safety reasons we won't accept this new one. If you think this is an error, mail us at contact@hackerexperience.com"
-msgstr "Já existe um pagamento seu sendo processado. Por motivos de segurança não aceitaremos esse novo. Se você acha que é um erro, envie um email para contato@hackerexperience.com"
+msgid "There already is a payment of yours being processed. For safety reasons we won't accept this new one. If you think this is an error, mail us at contact@hackanoob.net"
+msgstr "Já existe um pagamento seu sendo processado. Por motivos de segurança não aceitaremos esse novo. Se você acha que é um erro, envie um email para contato@hackanoob.net"
 
 msgid "Invalid request, please try again. (Your payment was not processed)"
 msgstr "Requisição inválida, por favor tente novamente. (Seu pagamento não foi processado)"
@@ -3934,8 +3934,8 @@ msgstr "Seja gentil"
 msgid "Rules"
 msgstr "Regras"
 
-msgid "Greetings, %s!<br/><br/>Thanks for trying out Hacker Experience, we are very excited to have you on board. Congratulations on completing the tutorial. It wasn't that hard, right? <br/><br/>There are <strong>a lot</strong> more things to do in the game, if you get stuck don't hesitate in talking to us.<br/><br/>The fastest way of getting help is posting at our <a href=\"http://forum.hackerexperience.com/\">community board</a>. We will happly guide you through the game. You can also find a great resource information on our <a href=\"http://wiki.hackerexperience.com/\">Wiki page</a>.<br/>Replying to this mail is another option. I'd be thrilled to talk to you :)<br/><br/>(By the way, I just sent you 1.337 BTC. You can see it on the Finances page. Enjoy!)<br/><br/>Pardon the pun, but we hope you have a great <i>experience</i> here!!<br/><br/>Happy hacking!<br/>Renato."
-msgstr "Saudações, %s!<br/><br/>Obrigado por testar Hacker Experience, estamos muito animados em ter você a bordo. Parabéns em completar o tutorial. Não foi tão difícil, certo? <br/><br/>Existem <strong>muitas</strong> outras coisas pra serem feitas no jogo, se você tiver alguma dificuldade não hesite em conversar conosco.<br/><br/>A forma mais rápida de arrumar ajuda é postando no nosso <a href=\"http://forum.hackerexperience.com/\">fórum</a>. Nós iremos alegremente guiá-lo pelo jogo. Você também pode encontrar uma ótima fonte de informações na nossa <a href=\"http://wiki.hackerexperience.com/\">Wiki</a>.<br/>Responder esse email é outra opção. Eu ficaria honrado em conversar com você :)<br/><br/>(Aliás, acabei de lhe enviar 1.337 BTC. Você pode ver mais detalhes na página de Finanças. Aproveite!)<br/><br/>Perdão pelo trocadilho, mas esperamos que você tenha uma ótima <i>experiência</i> por aqui!!<br/><br/>Boas invasões!<br/>Renato."
+msgid "Greetings, %s!<br/><br/>Thanks for trying out Hacker Experience, we are very excited to have you on board. Congratulations on completing the tutorial. It wasn't that hard, right? <br/><br/>There are <strong>a lot</strong> more things to do in the game, if you get stuck don't hesitate in talking to us.<br/><br/>The fastest way of getting help is posting at our <a href=\"http://forum.hackanoob.net/\">community board</a>. We will happly guide you through the game. You can also find a great resource information on our <a href=\"http://wiki.hackanoob.net/\">Wiki page</a>.<br/>Replying to this mail is another option. I'd be thrilled to talk to you :)<br/><br/>(By the way, I just sent you 1.337 BTC. You can see it on the Finances page. Enjoy!)<br/><br/>Pardon the pun, but we hope you have a great <i>experience</i> here!!<br/><br/>Happy hacking!<br/>Renato."
+msgstr "Saudações, %s!<br/><br/>Obrigado por testar Hacker Experience, estamos muito animados em ter você a bordo. Parabéns em completar o tutorial. Não foi tão difícil, certo? <br/><br/>Existem <strong>muitas</strong> outras coisas pra serem feitas no jogo, se você tiver alguma dificuldade não hesite em conversar conosco.<br/><br/>A forma mais rápida de arrumar ajuda é postando no nosso <a href=\"http://forum.hackanoob.net/\">fórum</a>. Nós iremos alegremente guiá-lo pelo jogo. Você também pode encontrar uma ótima fonte de informações na nossa <a href=\"http://wiki.hackanoob.net/\">Wiki</a>.<br/>Responder esse email é outra opção. Eu ficaria honrado em conversar com você :)<br/><br/>(Aliás, acabei de lhe enviar 1.337 BTC. Você pode ver mais detalhes na página de Finanças. Aproveite!)<br/><br/>Perdão pelo trocadilho, mas esperamos que você tenha uma ótima <i>experiência</i> por aqui!!<br/><br/>Boas invasões!<br/>Renato."
 
 msgid "Reply message to "
 msgstr "Responder mensagem para "

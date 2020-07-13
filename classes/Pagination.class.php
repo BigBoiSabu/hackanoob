@@ -927,7 +927,7 @@ require 'html/ranking/clan_'.$pageToLoad.'.html';
                     } else {
                         
                         $this->session->addMsg('Invalid get.', 'error');
-                        header("Location:ranking?show=software");
+                        header("Location:ranking.php?show=software");
                         exit();
                         
                     }
@@ -1218,7 +1218,7 @@ foreach($th as $thName){
                         $extraSelect = '';
                         $where = '';
                         
-                        header("Location:stats");
+                        header("Location:stats.php");
                         
                     } else {
                         
@@ -1228,7 +1228,7 @@ foreach($th as $thName){
                             
                             if($curRound == 1 || $roundInfo['GET_VALUE'] == $curRound){
 
-                                header("Location:stats");
+                                header("Location:stats.php");
                                 exit();
                                 
                             } else {
@@ -1262,7 +1262,7 @@ foreach($th as $thName){
                 if($error != ''){
                     
                     $this->session->addMsg($error, 'error');
-                    header("Location:stats");
+                    header("Location:stats.php");
                     
                     exit();
                     

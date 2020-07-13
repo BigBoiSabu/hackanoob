@@ -19,7 +19,7 @@ if($system->issetGet('show')){
         $current = '';
         $failed = 'active';
     } else {
-        header("Location:doom");
+        header("Location:doom.php");
         exit();
     }
 }

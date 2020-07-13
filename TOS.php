@@ -5,7 +5,7 @@
 $l = 'en_US';
 
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'br.hackerexperience.com' || $_SERVER['HTTP_HOST'] == 'www.br.hackerexperience.com'){
+    if($_SERVER['HTTP_HOST'] == 'br.localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.br.localhost:3000'){
         $l = 'pt_BR';
     }
 }
@@ -53,7 +53,7 @@ ul {
 <h1><?php echo _('Terms of Service'); ?></h1>
 <h6>Hacker Experience TOS</h6>
 
-<?php echo _('By using Hacker Experience, a service provided by NeoArt Labs, you are agreeing to be bound by the following terms and conditions.  Violation of any of the terms of service which are stated below will result in temporary or permanent termination of your account. If you do not agree with any of these terms, you must not use Hacker Experience or any subdomain within www.hackerexperience.com.'); ?><br/><br/>
+<?php echo _('By using Hacker Experience, a service provided by NeoArt Labs, you are agreeing to be bound by the following terms and conditions.  Violation of any of the terms of service which are stated below will result in temporary or permanent termination of your account. If you do not agree with any of these terms, you must not use Hacker Experience or any subdomain within www.hackanoob.net.'); ?><br/><br/>
 
 <li>1 - <?php echo _('You agree'); ?></li>
 
@@ -98,7 +98,7 @@ ul {
 
 <li>5 - <?php echo _('Account termination'); ?></li>
 
-<ul>5.1 - <?php echo _('Currently, the only way to cancel your account is by requesting it manually to contact@hackerexperience.com.'); ?></ul>
+<ul>5.1 - <?php echo _('Currently, the only way to cancel your account is by requesting it manually to contact@hackanoob.net.'); ?></ul>
 <ul>5.2 - <?php echo _('If you are a recurring-paying premium member, you will not be billed after your account is terminated.'); ?></ul>
 <ul>5.3 - <?php echo _('NeoArt Labs has the right to terminate your account. This will result in the deactivation or deletion of your account and you will be prevented from any access to the game.'); ?></ul>
 <ul><strong>5.4 - <?php echo _('Due to limited personnel, deleting an account might take several days.'); ?></strong></ul>

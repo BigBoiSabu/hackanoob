@@ -2,8 +2,7 @@
 session_start();
 if($_SESSION['id'] > 2)
 exit();
-// 2019: Translation: "Unsafe and temporary code". Gawd.
-//código inseguro e temporário
+// 2019: Translation: "Unsafe and temporary code". Would be a good idea to fix.
 
 if(!isset($_SESSION['id'])){
     header("Location:index.php");

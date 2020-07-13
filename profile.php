@@ -237,7 +237,7 @@ if($profileInfo['VALID_ID'] == 1){
                             
                             if($searchID['PLAYER_ID'] != 0){
                                 
-                                header("Location:profile?id=$searchID[PLAYER_ID]");
+                                header("Location:profile.php?id=$searchID[PLAYER_ID]");
                                 
                             } else {
                                 echo 'User "'.$userInfo['GET_VALUE'].'" not found';
@@ -283,7 +283,7 @@ if($profileInfo['VALID_ID'] == 1){
                                             $python->generateProfile($_SESSION['id'], 'br');
                                             
                                             $session->addMsg('Yey! You two are now friends :)', 'notice');
-                                            header("Location:profile");
+                                            header("Location:profile.php");
                                             exit();
                                             
                                         } else {

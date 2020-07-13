@@ -3,7 +3,7 @@
 $l = 'en_US';
 
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'br.hackerexperience.com' || $_SERVER['HTTP_HOST'] == 'www.br.hackerexperience.com'){
+    if($_SERVER['HTTP_HOST'] == 'br.localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.br.localhost:3000'){
         $l = 'pt_BR';
     }
 }
@@ -19,36 +19,36 @@ textdomain($domain);
 
 if(!isset($_SESSION['SPECIAL_ID'])){
     session_destroy();
-    header("Location:../index");
+    header("Location:../index.php");
     exit();
 } elseif($_SESSION['SPECIAL_ID'] != 'fb'){
     session_destroy();
-    header("Location:../index");
+    header("Location:../index.php");
     exit();
 }
 
 require_once '../classes/Facebook.class.php';
 
-$fbServerURL = 'http://hackerexperience.com/';
+$fbServerURL = 'http://localhost:3000/';
 
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'br.hackerexperience.com'){
-        $fbServerURL = 'http://br.hackerexperience.com/';
-    } elseif($_SERVER['HTTP_HOST'] == 'en.hackerexperience.com'){
-        $fbServerURL = 'http://en.hackerexperience.com/';
+    if($_SERVER['HTTP_HOST'] == 'br.localhost:3000'){
+        $fbServerURL = 'http://br.localhost:3000/';
+    } elseif($_SERVER['HTTP_HOST'] == 'en.hackanoob.net'){
+        $fbServerURL = 'http://en.hackanoob.net/';
     }
 }
         
 switch($fbServerURL){
-    case 'http://hackerexperience.com/':
+    case 'http://localhost:3000/':
         $appID = 0;
         $appSecret = 'REDACTED';
         break;
-    case 'http://br.hackerexperience.com/':
+    case 'http://br.hackanoob.net/':
         $appID = 0;
         $appSecret = 'REDACTED';
         break;
-    case 'http://en.hackerexperience.com/':
+    case 'http://en.hackanoob.net/':
         $appID = 0;
         $appSecret = 'REDACTED';
         break;
@@ -171,7 +171,7 @@ if(isset($_POST['fbuser']) || isset($_POST['predefined'])){
                     $_SESSION['FBLOGIN'] = TRUE;
                     $_GET = '';
                     
-                    header("Location:index");
+                    header("Location:index.php");
                     exit();
                 
                 } else {

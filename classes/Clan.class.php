@@ -2635,7 +2635,7 @@ var uid = <?php echo $this->clanID; ?>;
             if($_SERVER['SERVER_NAME'] == 'localhost'){
                 $forumLink = '/forum/viewforum?f='.$forumClanID['forum_id'];
             } else {
-                $forumLink = 'https://forum.hackerexperience.com/viewforum.php?f='.$forumClanID['forum_id'];
+                $forumLink = 'https://forum.hackanoob.net/viewforum.php?f='.$forumClanID['forum_id'];
             }
             
             ?>
@@ -3631,7 +3631,7 @@ die("Deprecated"); //But I'm going to use it in the future, so do not delete it
                     }
                     
                 } else {
-                    header("Location:clan?action=admin&opt=manage&id=$uid&do=hierarchy");
+                    header("Location:clan.php?action=admin&opt=manage&id=$uid&do=hierarchy");
                     exit();
                 }
                 
@@ -3729,13 +3729,13 @@ die("Deprecated"); //But I'm going to use it in the future, so do not delete it
                         
                     </form>
                     <br/><br/>
-                    <input type="submit" onClick="parent.location='clan?action=admin'" value="Admin panel">
-                    <input type="submit" onClick="parent.location='clan?action=admin&opt=manage&id=<?php echo $uid; ?>'" value="Player index">
+                    <input type="submit" onClick="parent.location='clan.php?action=admin'" value="Admin panel">
+                    <input type="submit" onClick="parent.location='clan.php?action=admin&opt=manage&id=<?php echo $uid; ?>'" value="Player index">
                     
                     <?php
                     
                 } else {
-                    header("Location:clan?action=admin&opt=manage&id=$uid&do=privileges");
+                    header("Location:clan.php?action=admin&opt=manage&id=$uid&do=privileges");
                     exit();
                 }
                 

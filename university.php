@@ -134,7 +134,7 @@ if($system->issetGet('opt')){
         }
 
         if(!$ranking->cert_validate2learn($playerLearning)){
-            $system->handleError('Some error happened.', 'university?opt=certification');
+            $system->handleError('Some error happened.', 'university.php?opt=certification');
         }
 
         $ranking->cert_add($playerLearning);
@@ -147,7 +147,7 @@ if($system->issetGet('opt')){
             $player->setPlayerLearning(2);
         }
         
-        header("Location:university?opt=certification");
+        header("Location:university.php?opt=certification");
         exit();
 
     } else {

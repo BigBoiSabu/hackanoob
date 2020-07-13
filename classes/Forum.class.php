@@ -163,7 +163,7 @@ class Forum {
             if($_SERVER['SERVER_NAME'] == 'localhost'){
                 $postLink = '/forum/'.'viewtopic.php?f='.$postInfo['forum_id'].'&t='.$postInfo['topic_id'];
             } else {
-                $postLink = 'https://forum.hackerexperience.com/'.'viewtopic.php?f='.$postInfo['forum_id'].'&t='.$postInfo['topic_id'];
+                $postLink = 'https://forum.hackanoob.net/'.'viewtopic.php?f='.$postInfo['forum_id'].'&t='.$postInfo['topic_id'];
             }
             
             switch($type){

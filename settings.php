@@ -63,7 +63,7 @@ if(isset($_POST)){
 
             $_SESSION['language'] = 'pt_BR';
             $session->addMsg('Language changed to portuguese.', 'notice');
-            header("Location:https://br.hackerexperience.com/");
+            header("Location:https://br.hackanoob.net/");
             exit();
         } elseif($lang == 'English'){
             
@@ -74,7 +74,7 @@ if(isset($_POST)){
             
             $_SESSION['language'] = 'en_US';
             $session->addMsg('Language changed to english.', 'notice');
-            header("Location:https://en.hackerexperience.com/");
+            header("Location:https://en.hackanoob.net/");
             exit();
         }
         

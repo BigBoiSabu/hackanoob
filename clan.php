@@ -169,7 +169,7 @@ if($system->issetGet('action')){
 
                         if($error != ''){
                             $session->addMsg($error, 'error');
-                            header("Location:clan?action=war");
+                            header("Location:clan.php?action=war");
                         }
 
                     } elseif($system->issetGet('show')){
@@ -209,7 +209,7 @@ if($system->issetGet('action')){
                         
                         if($error != ''){
                             $session->addMsg($error, 'error');
-                            header("Location:clan?action=war");
+                            header("Location:clan.php?action=war");
                         }
                         
                     } else {
@@ -220,7 +220,7 @@ if($system->issetGet('action')){
                 
                 } else {
                     $session->addMsg('Only members can see the war details.', 'error');
-                    header("Location:clan");
+                    header("Location:clan.php");
                 }
                 
                 break;
@@ -231,7 +231,7 @@ if($system->issetGet('action')){
                     $clan->show_leavePage($clan->getUserAuthAndHierarchy()->authlevel);
 
                 } else {
-                    header("Location:clan");
+                    header("Location:clan.php");
                 }
                 
                 break;
@@ -441,7 +441,7 @@ if($system->issetGet('action')){
                         $clan->show_clanSettings();
                         
                     } elseif($auth == 4){
-                        header("Location:clan?action=admin");
+                        header("Location:clan.php?action=admin");
                         exit();
                     }
                 } else {
@@ -559,7 +559,7 @@ if($system->issetGet('action')){
                     
                     if($error == 1){
                         
-                        header("Location:clan");
+                        header("Location:clan.php");
                         
                     }
                     

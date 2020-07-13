@@ -803,7 +803,7 @@ class Lists {
                                 self::setLastCollect($virusInfo->virusid);
 
                             } else {
-                                $text4 = ' <a href="https://wiki.hackerexperience.com/'._('en').':hacked_database'._('#collecting_money').'">(?)</a>';
+                                $text4 = ' <a href="https://wiki.hackanoob.net/'._('en').':hacked_database'._('#collecting_money').'">(?)</a>';
                                 
                                 $sent = 0;
                                 $moneyGenerated = $formatedValue = 0;

@@ -17,7 +17,7 @@ $ranking = new Ranking();
 
 if(!$ranking->cert_have(2)){
     $session->addMsg(sprintf(_("You need the certification %s to enable this page."), '<strong>'._('Hacking 101').'</strong>'), 'error');
-    header("Location:university?opt=certification");
+    header("Location:university.php?opt=certification");
     exit();
 }
 

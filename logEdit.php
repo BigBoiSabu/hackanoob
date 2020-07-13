@@ -105,7 +105,7 @@ if($session->issetLogin()){
                 if($process->newProcess($_SESSION['id'], $act, $vid, $localStr, '', $tmpLogID, '', $npc)){
 
                     $pid = $session->processID('show');
-                    header("Location:processes?pid=$pid");
+                    header("Location:processes.php?pid=$pid");
 
                 } else {
 
@@ -121,7 +121,7 @@ if($session->issetLogin()){
                 if($local == 1){
                     header("Location:log.php");
                 } else {
-                    header("Location:internet?view=logs");
+                    header("Location:internet.php?view=logs");
                 }
                 
             }

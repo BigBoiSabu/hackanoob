@@ -692,7 +692,7 @@ class HardwareVPC extends Player {
             }
             
         } else {
-            header("Location:hardware");
+            header("Location:hardware.php");
             exit();
         }
         
@@ -2458,9 +2458,9 @@ class HardwareVPC extends Player {
         $newPower = $itemInfo[$id]['POW'];
 
         if($internet != 0 && $oldSpecs['ISSET'] == 0){
-            //$this->session->addMsg('You can only upgrade YOUR clan server. Sorry.', 'error');
-            //header("Location:internet");
-            //exit();
+            $this->session->addMsg('You can only upgrade YOUR clan server. Sorry.', 'error');
+            header("Location:internet.php");
+            exit();
         }
         
         $type = '';
@@ -2507,7 +2507,7 @@ class HardwareVPC extends Player {
                     $xhdInfo = self::getXHD($xhdID);
 
                     if($xhdInfo['ISSET'] == 0){
-                        header("Location:hardware");
+                        header("Location:hardware.php");
                         exit();
                     }
                     
@@ -2519,7 +2519,7 @@ class HardwareVPC extends Player {
                     $pc = $xhdID;
                     
                 } else {
-                    header("Location:hardware");
+                    header("Location:hardware.php");
                     exit();
                 }
 
@@ -3452,15 +3452,15 @@ class SoftwareVPC extends Player {
             
             if($softInfo->softtype == 30){
                 if($local == 1){
-                    header("Location:software?action=text&view=".$softID);
+                    header("Location:software.php?action=text&view=".$softID);
                 } else {
-                    header("Location:internet?view=software&cmd=txt&txt=".$softID);
+                    header("Location:internet.php?view=software&cmd=txt&txt=".$softID);
                 }
             } else {
                 if($local == 1){
-                    header("Location:software?action=folder&view=".$softID);
+                    header("Location:software.php?action=folder&view=".$softID);
                 } else {
-                    header("Location:internet?view=software&cmd=folder&folder=".$softID);
+                    header("Location:internet.php?view=software&cmd=folder&folder=".$softID);
                 }
             }
             
@@ -4818,7 +4818,7 @@ if($npc == 1 && $local == 0){
             }
             
             $this->session->addMsg('This folder doesnt exists.', 'error');
-            header("Location:software");
+            header("Location:software.php");
             
         }
         
@@ -7706,7 +7706,7 @@ class Virus extends Player {
         if($error != ''){
             
             $this->session->addMsg($error, 'error');
-            header("Location:list?action=ddos&ignore=1");
+            header("Location:list.php?action=ddos&ignore=1");
             exit();
             
         }

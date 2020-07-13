@@ -744,7 +744,7 @@ class Process {
 
         } else {
 
-            header("Location:logout");
+            header("Location:logout.php");
 
         }
 
@@ -2444,9 +2444,9 @@ if($this->pAction == 27){ $replace = TRUE; $newTime = 300 - $pInfo[$i]['pduratio
                         $this->system->handleError('NO_SEEKER');
 
                         if($this->pLocal == '1'){
-                            header("Location:software");
+                            header("Location:software.php");
                         } else {
-                            header("Location:internet?view=software");
+                            header("Location:internet.php?view=software");
                         }
                         exit();
 
@@ -4253,7 +4253,7 @@ if($this->pAction == 27){ $replace = TRUE; $newTime = 300 - $pInfo[$i]['pduratio
                         } else {
 
                             $softID = $getInfoSoftID['GET_VALUE'];
-                            header("Location:software?action=del&id=$softID");
+                            header("Location:software.php?action=del&id=$softID");
 
                         }
 
@@ -4273,7 +4273,7 @@ if($this->pAction == 27){ $replace = TRUE; $newTime = 300 - $pInfo[$i]['pduratio
                             
                         } else {
 
-                            header("Location:software");
+                            header("Location:software.php");
 
                         }
 
@@ -4295,7 +4295,7 @@ if($this->pAction == 27){ $replace = TRUE; $newTime = 300 - $pInfo[$i]['pduratio
                         } else {
 
                             $softID = $getInfoSoftID['GET_VALUE'];
-                            header("Location:internet?view=software&id=$softID");
+                            header("Location:internet.php?view=software&id=$softID");
 
                         }
 
@@ -4315,7 +4315,7 @@ if($this->pAction == 27){ $replace = TRUE; $newTime = 300 - $pInfo[$i]['pduratio
 
                         } else {
 
-                            header("Location:internet?view=software");
+                            header("Location:internet.php?view=software");
 
                         }
 
@@ -4328,9 +4328,9 @@ if($this->pAction == 27){ $replace = TRUE; $newTime = 300 - $pInfo[$i]['pduratio
                 $this->session->addMsg('This software doesn\'t exists.', 'error');
 
                 if($host == 'local'){
-                    header("Location:software");
+                    header("Location:software.php");
                 } else {
-                    header("Location:internet?view=software");
+                    header("Location:internet.php?view=software");
                 }
                 
             }

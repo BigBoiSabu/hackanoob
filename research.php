@@ -56,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                         $pid = $session->processID('show');
                         
-                        header("Location:processes?pid=$pid");
+                        header("Location:processes.php?pid=$pid");
                         
                     } else {
 

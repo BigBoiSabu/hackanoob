@@ -155,7 +155,7 @@ if (ini_get("session.use_cookies")) {
         session_destroy();
         
         if($redirect){
-            header("Location:index");
+            header("Location:index.php");
             exit();
         }
         
@@ -554,11 +554,11 @@ if (ini_get("session.use_cookies")) {
             return 'en_US';
         }
         
-        if($_SERVER['HTTP_HOST'] == 'hackerexperience.com' || $_SERVER['HTTP_HOST'] == 'www.hackerexperience.com'){
+        if($_SERVER['HTTP_HOST'] == 'localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.localhost:3000'){
             return 'en_US';
         }
         
-        if($_SERVER['HTTP_HOST'] == 'br.hackerexperience.com' || $_SERVER['HTTP_HOST'] == 'www.br.hackerexperience.com'){
+        if($_SERVER['HTTP_HOST'] == 'br.localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.br.localhost:3000'){
             return 'pt_BR';
         }
         
@@ -583,39 +583,39 @@ if (ini_get("session.use_cookies")) {
         
         switch($page){
             case 'clan':
-                return 'https://wiki.hackerexperience.com/'._('en').':clans';
+                return 'https://wiki.hackanoob.net/'._('en').':clans';
             case 'missions':
                 if($info == 'level'){
                     $ext = _('#mission_level');
                 }
-                return 'https://wiki.hackerexperience.com/'._('en').':missions'.$ext;
+                return 'https://wiki.hackanoob.net/'._('en').':missions'.$ext;
             case 'hardware':
-                return 'https://wiki.hackerexperience.com/'._('en').':hardware';
+                return 'https://wiki.hackanoob.net/'._('en').':hardware';
             case 'log':
-                return 'https://wiki.hackerexperience.com/'._('en').':log';
+                return 'https://wiki.hackanoob.net/'._('en').':log';
             case 'university':
-                return 'https://wiki.hackerexperience.com/'._('en').':university';
+                return 'https://wiki.hackanoob.net/'._('en').':university';
             case 'finances':
-                return 'https://wiki.hackerexperience.com/'._('en').':finances';
+                return 'https://wiki.hackanoob.net/'._('en').':finances';
             case 'list':
                 if($info == 'ddos'){
-                    return 'https://wiki.hackerexperience.com/'._('en').':ddos';
+                    return 'https://wiki.hackanoob.net/'._('en').':ddos';
                 } elseif($info == 'collect'){
-                    return 'https://wiki.hackerexperience.com/'._('en').':hacked_database';
+                    return 'https://wiki.hackanoob.net/'._('en').':hacked_database';
                 }
-                return 'https://wiki.hackerexperience.com/'._('en').':hacked_database';
+                return 'https://wiki.hackanoob.net/'._('en').':hacked_database';
             case 'task':
-                return 'https://wiki.hackerexperience.com/'._('en').':processes';
+                return 'https://wiki.hackanoob.net/'._('en').':processes';
             case 'software':
                 if($info == 'external'){
-                    return 'https://wiki.hackerexperience.com/'._('en').':hardware'._('#external_hard_drive');
+                    return 'https://wiki.hackanoob.net/'._('en').':hardware'._('#external_hard_drive');
                 }
-                return 'https://wiki.hackerexperience.com/'._('en').':softwares';
+                return 'https://wiki.hackanoob.net/'._('en').':softwares';
             case 'internet':
                 if($info == 'hack'){
-                    return 'https://wiki.hackerexperience.com/'._('en').':hacking';
+                    return 'https://wiki.hackanoob.net/'._('en').':hacking';
                 }
-                return 'https://wiki.hackerexperience.com/'._('en').':internet';
+                return 'https://wiki.hackanoob.net/'._('en').':internet';
                 
         }
         
