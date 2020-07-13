@@ -3,7 +3,7 @@
 $l = 'en_US';
 
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'br.localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.br.localhost:3000'){
+    if($_SERVER['HTTP_HOST'] == 'br.192.168.8.68:4000' || $_SERVER['HTTP_HOST'] == 'www.br.192.168.8.68:4000'){
         $l = 'pt_BR';
     }
 }
@@ -29,18 +29,18 @@ if(!isset($_SESSION['SPECIAL_ID'])){
 
 require_once '../classes/Facebook.class.php';
 
-$fbServerURL = 'http://localhost:3000/';
+$fbServerURL = 'http://192.168.8.68:4000/';
 
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'br.localhost:3000'){
-        $fbServerURL = 'http://br.localhost:3000/';
+    if($_SERVER['HTTP_HOST'] == 'br.192.168.8.68:4000'){
+        $fbServerURL = 'http://br.192.168.8.68:4000/';
     } elseif($_SERVER['HTTP_HOST'] == 'en.hackanoob.net'){
         $fbServerURL = 'http://en.hackanoob.net/';
     }
 }
         
 switch($fbServerURL){
-    case 'http://localhost:3000/':
+    case 'http://192.168.8.68:4000/':
         $appID = 0;
         $appSecret = 'REDACTED';
         break;

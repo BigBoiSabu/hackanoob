@@ -3,7 +3,7 @@
 $l = 'en_US';
 
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'br.localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.br.localhost:3000'){
+    if($_SERVER['HTTP_HOST'] == 'br.192.168.8.68:4000' || $_SERVER['HTTP_HOST'] == 'www.br.192.168.8.68:4000'){
         $l = 'pt_BR';
     }
 }

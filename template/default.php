@@ -1,10 +1,10 @@
 <?php
 
-$fbServerURL = 'http://localhost:3000/';
+$fbServerURL = 'http://192.168.8.68:4000/';
 
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'localhost:3000'){
-        $fbServerURL = 'http://localhost:3000/';
+    if($_SERVER['HTTP_HOST'] == '192.168.8.68:4000'){
+        $fbServerURL = 'http://192.168.8.68:4000/';
     } elseif($_SERVER['HTTP_HOST'] == 'hackanoob.net'){
         $fbServerURL = 'http://hackanoob.net/';
     }
@@ -13,7 +13,7 @@ if(isset($_SERVER['HTTP_HOST'])){
 $l = 'en_US';
 
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.localhost:3000'){
+    if($_SERVER['HTTP_HOST'] == '192.168.8.68:4000' || $_SERVER['HTTP_HOST'] == 'www.192.168.8.68:4000'){
         $l = 'en_US';
     }
 }
@@ -37,7 +37,7 @@ require_once 'twitter/twitteroauth.php';
 require_once 'classes/Facebook.class.php';
 
 switch($fbServerURL){
-    case 'http://localhost:3000/':
+    case 'http://192.168.8.68:4000/':
         $appID = 0;
         $appSecret = 'REDACTED';
         break;
@@ -45,10 +45,10 @@ switch($fbServerURL){
         $appID = 0;
         $appSecret = 'REDACTED';
         break;
-    /*case 'http://hackanoob.net/':
+    case 'http://hackanoob.net/':
         $appID = 0;
         $appSecret = 'REDACTED';
-        break; */
+        break;
 }
 
 
@@ -68,12 +68,12 @@ $twitteroauth = new TwitterOAuth('REDACTED', 'REDACTED');
 $twitteroauth->host = "https://api.twitter.com/1.1/";
 
 
-if($_SERVER['HTTP_HOST'] == 'www.localhost:3000' || $_SERVER['HTTP_HOST'] == 'localhost:3000'){
-    $url = 'http://localhost:3000/';
+if($_SERVER['HTTP_HOST'] == 'www.192.168.8.68:4000' || $_SERVER['HTTP_HOST'] == '192.168.8.68:4000'){
+    $url = 'http://192.168.8.68:4000/';
 } else {
     $url = 'http://127.0.0.1/';
 }
-$url = 'http://localhost:3000/';
+$url = 'http://192.168.8.68:4000/';
 
 $request_token = $twitteroauth->getRequestToken($url);
 
@@ -91,7 +91,7 @@ if($request_token){
         //TODO: report
     }
 
-} elseif($url == 'http://localhost:3000/'){
+} elseif($url == 'http://192.168.8.68:4000/'){
     //echo 'Error while connecting to twitter';
     //TODO: report instead of echo
 }
@@ -142,15 +142,15 @@ if(isset($_SESSION['TYP'])){
         <meta property="og:locale" content="en_US">
         <meta property="og:locale:alternate" content="pt_BR">
         <meta property="og:title" content="Hacker Experience"/>
-        <meta property="og:image" content="https://localhost:3000/images/og.png"/>
-        <meta property="og:url" content="https://localhost:3000/"/>
+        <meta property="og:image" content="https://192.168.8.68:4000/images/og.png"/>
+        <meta property="og:url" content="https://192.168.8.68:4000/"/>
         <meta property="og:description" content="HackanooB is a browser-based hacking simulation game based on Hacker Experience legacy code, where you play the role of a hacker seeking money and power. Join now!"/>
 <?php } elseif ($_GET['fb_locale'] == 'pt_BR'){ ?>
         <meta property="og:locale" content="pt_BR">
         <meta property="og:locale:alternate" content="en_US">
         <meta property="og:title" content="Hacker Experience"/>
-        <meta property="og:image" content="https://localhost:3000/images/ogbr.png"/>
-        <meta property="og:url" content="https://localhost:3000/"/>
+        <meta property="og:image" content="https://192.168.8.68:4000/images/ogbr.png"/>
+        <meta property="og:url" content="https://192.168.8.68:4000/"/>
         <meta property="og:description" content="Hacker Experience é um browser-game de simulação de hacking, onde você assume o papel de um hacker buscando dinheiro e poder. Cadastre-se agora!"/>
 <?php } ?>
         <link href="css/bootstrap.css" rel="stylesheet">
@@ -187,8 +187,8 @@ if($l == 'pt_BR'){
                     <dt><a href="#"><span><img class="flag" src="images/<?php echo $current; ?>.png" alt="" /></span></a></dt>
                     <dd>
                         <ul>
-                            <li><a href="https://localhost:3000/"><img class="flag" src="images/en.png" alt="" /> English</a></li>
-                            <li><a href="https://localhost:3000/"><img class="flag" src="images/pt.png" alt="" /> Português</a></li>
+                            <li><a href="https://192.168.8.68:4000/"><img class="flag" src="images/en.png" alt="" /> English</a></li>
+                            <li><a href="https://192.168.8.68:4000/"><img class="flag" src="images/pt.png" alt="" /> Português</a></li>
                         </ul>
                     </dd>
                 </dl>
@@ -208,7 +208,7 @@ if($msgIndex){
 ?>
                         <div class="intro-message">
                             <h1>HackanooB</h1>
-                            <h3 class="digital"><?php echo _('War of the Noobz'); ?><span class="a_bebida_que_pisca">_</span></h3>
+                            <h3 class="digital"><?php echo _('Cyberspace Under Attack'); ?><span class="a_bebida_que_pisca">_</span></h3>
                             <hr class="intro-divider">
                             <ul class="list-inline intro-social-buttons">
                                 <li><a class="btn btn-default btn-lg btn-front goto-login"><i class="fa fa-power-off fa-fw"></i> <span class="network-name"><?php echo _('Login'); ?></span></a></li>
@@ -419,7 +419,7 @@ if($msgRegister){
                             <p><?php echo _('Here comes a <a href="http://www.paulgraham.com/gba.html">looong discussion</a>. Many believe the word <em>hacker</em> should designate the so-called white hat (talented programmer, or an ethical hacker). Others, assume it to mean criminals behind the screen.'); ?></p>
                             <p><?php echo _('<a href="http://duartes.org/gustavo/blog/post/first-recorded-usage-of-hacker/">History has shown us</a> that maybe it really was meant to define the bad guys, however we do believe that hacker means <a href="https://stallman.org/articles/on-hacking.html">way more</a> than that.'); ?></p>
                             <p><?php echo _('Regardless of definition, we want our users to enjoy the game, whether they call it Hacker or Cracker Experience. That\'s it, name whatever you want.'); ?></p>
-                            <p><?php echo _('Meanwhile, we have a special <a href="https://forum.localhost:3000/">board designated to teach computer science and programming</a> for people. Instead of engaging into useless flame wars, feel free to join and share your knowledge to others. I\'d call <em>that</em> hacker :)'); ?></p>
+                            <p><?php echo _('Meanwhile, we have a special <a href="https://forum.192.168.8.68:4000/">board designated to teach computer science and programming</a> for people. Instead of engaging into useless flame wars, feel free to join and share your knowledge to others. I\'d call <em>that</em> hacker :)'); ?></p>
                         </div>                          
                     </div>
                     <div class="faq-buttons-intro">
@@ -439,9 +439,9 @@ if($msgRegister){
                     <h5 class="footer-title"><?php echo _('NAVIGATE'); ?></h5>
                     <ul>
                         <li><a target="__blank" href="privacy.php" class="scroll"><?php echo _('PRIVACY'); ?></a></li>
-                        <li><a href="http://status.localhost:3000/" class="scroll">STATUS</a></li>
-                        <li><a href="http://forum.localhost:3000/" class="scroll"><?php echo _('FORUM'); ?></a></li>
-                        <li><a href="http://wiki.localhost:3000/" class="scroll">WIKI</a></li>
+                        <li><a href="http://status.192.168.8.68:4000/" class="scroll">STATUS</a></li>
+                        <li><a href="http://forum.192.168.8.68:4000/" class="scroll"><?php echo _('FORUM'); ?></a></li>
+                        <li><a href="http://wiki.192.168.8.68:4000/" class="scroll">WIKI</a></li>
                     </ul>
                 </div>
                 <div id="legal-disclaimer" class="three columns">
@@ -454,7 +454,7 @@ if($msgRegister){
                 <div id="contact" class="four columns text-right">
                     <h5 class="footer-title"><?php echo _('CONTACT US'); ?></h5>
                     <div class="mail-link">
-                        <a href="http://www.localhost:3000/contact"><i class="fa fa-home"></i>www.localhost:3000/contact</a><br/>
+                        <a href="http://www.192.168.8.68:4000/contact"><i class="fa fa-home"></i>www.192.168.8.68:4000/contact</a><br/>
                         <a href="mailto:<?php echo _('contact@hackanoob.net'); ?>"><i class="fa fa-envelope-o"></i><?php echo _('contact@hackanoob.net'); ?></a><br/>
                     </div>
                     <div class="footer-social">
