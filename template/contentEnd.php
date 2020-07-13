@@ -78,10 +78,10 @@ if(isset($_SESSION['EXEC_TIME'])){
 
         <div id="breadcrumb" class="center">
             <span class="pull-left hide-phone" style="margin-left: 10px;"><a href="legal" ><font color=""><?php echo _("Terms of Use"); ?></font></a></span>
-            <span class="pull-left hide-phone"><a href="https://forum.hackerexperience.com/" ><font color=""><?php echo _("Forum"); ?></font></a></span>
+            <span class="pull-left hide-phone"><a href="https://forum.hackanoob.net/" ><font color=""><?php echo _("Forum"); ?></font></a></span>
             <span class="pull-left hide-phone"><a href="stats" ><?php echo _("Stats"); ?></a></span>
             
-            <span class="center">2013 ~ 2019 &copy; <b>HE Community</b><a href="https://status.hackerexperience.com/"><?php echo $queries; ?> <?php echo _("queries in"); ?> <?php echo $time; ?> ms</a></span>
+            <span class="center">2013 ~ 2019 &copy; <b>HE Community</b><a href="https://status.hackanoob.net/"><?php echo $queries; ?> <?php echo _("queries in"); ?> <?php echo $time; ?> ms</a></span>
             
             <span id="credits" class="pull-right hide-phone link"><a><?php echo _("Credits"); ?></a></span>
             <span id="report-bug" class="pull-right hide-phone link"><a><?php echo _("Report Bug"); ?></a></span>

@@ -5,8 +5,7 @@ require 'classes/Session.class.php';
 require 'classes/System.class.php';
 
 
-//HG was here
-//$session = new Session();
+$session = new Session();
 $loadFacebook = FALSE;
 $loadTwitter = FALSE;
 $remembered = TRUE;
@@ -14,7 +13,7 @@ $remembered = TRUE;
 require 'classes/Facebook.class.php';
 
 if(isset($_COOKIE['PHPSESSID'])){
-    //$session = new Session();
+    $session = new Session();
 }
 
 if(!isset($_SESSION['id'])){
@@ -22,17 +21,17 @@ if(!isset($_SESSION['id'])){
     if(isset($_GET['nologin'])){
         $_SESSION = NULL;
         session_destroy();
-        header("Location:index");
+        header("Location:index.php");
         exit();
     }
     
     if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['code']) || isset($_SESSION['FBLOGIN'])){
                 
-        $fbServerURL = 'http://hackanoob.net/';
+        $fbServerURL = 'http://localhost:3000/';
 
         if(isset($_SERVER['HTTP_HOST'])){
-            if($_SERVER['HTTP_HOST'] == 'hackanoob.net'){
-                $fbServerURL = 'http://hackanoob.net/';
+            if($_SERVER['HTTP_HOST'] == 'localhost:3000'){
+                $fbServerURL = 'http://localhost:3000/';
             } elseif($_SERVER['HTTP_HOST'] == 'hackanoob.net'){
                 $fbServerURL = 'http://hackanoob.net/';
             }
@@ -40,7 +39,7 @@ if(!isset($_SESSION['id'])){
         
         // 2019: Update the links, the appId and the appSecret below in order to enable FB login
         switch($fbServerURL){
-            case 'http://hackanoob.net/':
+            case 'http://localhost:3000/':
                 $appID = 0;
                 $appSecret = 'REDACTED';
                 break;
@@ -99,7 +98,7 @@ if(!isset($_SESSION['id'])){
                 
                 $database->login($fbInfo->login, '0', 'facebook');
 
-                header("Location:index");
+                header("Location:index.php");
 
             }
 
@@ -123,7 +122,7 @@ if(!isset($_SESSION['id'])){
                 $_SESSION['MSG'] = $msg;
                 $_SESSION['MSG_TYPE'] = 'error';
                 $_SESSION['TYP'] = 'home';
-                header("Location:index");
+                header("Location:index.php");
                 exit();
             }
 
@@ -144,7 +143,7 @@ if(!isset($_SESSION['id'])){
                 $_SESSION['MSG'] = $user_info->errors[0]->message;
                 $_SESSION['MSG_TYPE'] = 'error';
                 $_SESSION['TYP'] = 'home';
-                header("Location:index");
+                header("Location:index.php");
                 exit();
             }
 
@@ -177,7 +176,7 @@ if(!isset($_SESSION['id'])){
 
             $database->login($ttInfo->login, '0', 'twitter');
 
-            header("Location:index");
+            header("Location:index.php");
 
         }
     

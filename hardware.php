@@ -171,7 +171,7 @@ if($system->issetGet('opt')){
 
 
     } else {
-        header("Location:hardware");
+        header("Location:hardware.php");
         exit();
     }
 

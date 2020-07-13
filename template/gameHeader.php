@@ -28,17 +28,17 @@ if(isset($_SESSION['id'])){
     $sql = "SELECT lang FROM users_language WHERE userID = '".$_SESSION['id']."' LIMIT 1";
     $lang = $pdo->query($sql)->fetch(PDO::FETCH_OBJ)->lang;    
     
-//    require 'classes/EmailVerification.class.php';
-//    $emailVerification = new EmailVerification();
-//    
-//    if(!$emailVerification->isVerified($_SESSION['id'])){
-//        header("Location:welcome");
-//        exit();
-//    }
-//    
-//    if((!$ranking->cert_have('1')) && ($_SERVER['SCRIPT_NAME'] != '/university.php' || ($_SERVER['SCRIPT_NAME'] == '/university.php' && !isset($_GET['opt']))) && $_SERVER['SCRIPT_NAME'] != '/welcome.php'){
-//        header("Location:welcome");
-//    }
+    require 'classes/EmailVerification.class.php';
+    $emailVerification = new EmailVerification();
+    
+    if(!$emailVerification->isVerified($_SESSION['id'])){
+        header("Location:welcome.php");
+        exit();
+    }
+    
+    if((!$ranking->cert_have('1')) && ($_SERVER['SCRIPT_NAME'] != '/university.php' || ($_SERVER['SCRIPT_NAME'] == '/university.php' && !isset($_GET['opt']))) && $_SERVER['SCRIPT_NAME'] != '/welcome.php'){
+        header("Location:welcome.php");
+    }
 
     if($_SESSION['ROUND_STATUS'] != 1){
         
@@ -68,14 +68,14 @@ if(isset($_SESSION['id'])){
         }
         
         if($redirect){
-            header("Location:index");
+            header("Location:index.php");
         }
         
     }
     
     if(!$session->validLogin()){
         $session->logout(0);
-        header("Location:index");
+        header("Location:index.php");
         exit();
     }
 
@@ -105,7 +105,7 @@ if(isset($_SESSION['id'])){
     $_SESSION['TYP'] = 'index';
     $_SESSION['MSG_TYPE'] = 'error';
     
-    header("Location:index");
+    header("Location:index.php");
     exit();
 
 }

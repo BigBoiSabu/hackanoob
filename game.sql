@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.4-m14, for Linux (x86_64)
 --
--- Host: db.hackerexperience.com    Database: game
+-- Host: db.hackanoob.net    Database: game
 -- ------------------------------------------------------
 -- Server version	5.7.4-m14
 

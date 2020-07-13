@@ -892,7 +892,7 @@ class Storyline {
             if($doomInfo->timeleft < 0){
                 require 'cron/doomUpdater.php';
                 $this->session->logout(0);
-                header("Location:index");
+                header("Location:index.php");
                 exit();
             }
             

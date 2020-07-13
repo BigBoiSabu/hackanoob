@@ -1,5 +1,10 @@
 # hackanoob
 
-rebuilding the legacy...
 
-This code currently runs partially on the webserver, but has errors and you cannot login or register. Or does it?
+
+You are such a noob you have to ask how to use the controller.
+
+
+
+
+## There was a war for cyberspace and the rights to control the noobs...

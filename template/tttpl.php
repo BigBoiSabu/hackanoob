@@ -3,7 +3,7 @@
 $l = 'en_US';
 
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'br.hackerexperience.com' || $_SERVER['HTTP_HOST'] == 'www.br.hackerexperience.com'){
+    if($_SERVER['HTTP_HOST'] == 'br.localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.br.localhost:3000'){
         $l = 'pt_BR';
     }
 }
@@ -19,17 +19,17 @@ textdomain($domain);
 
 if(!isset($_SESSION['SPECIAL_ID'])){
     session_destroy();
-    header("Location:../index");
+    header("Location:../index.php");
     exit();
 } elseif($_SESSION['SPECIAL_ID'] != 'tt'){
     session_destroy();
-    header("Location:../index");
+    header("Location:../index.php");
     exit();
 }
 
 if(!isset($_SESSION['twitter_data'])){
     session_destroy();
-    header("Location:../index");
+    header("Location:../index.php");
     exit();
 }
 
@@ -131,7 +131,7 @@ if(isset($_POST['ttuser']) || isset($_POST['predefined'])){
                 unset($_SESSION['SPECIAL_ID']);
                 $_SESSION['TTLOGIN'] = TRUE;
 
-                header("Location:index");
+                header("Location:index.php");
                 exit();
 
             } else {

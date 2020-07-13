@@ -5,7 +5,7 @@ ini_set('display_errors', 'on');
 require 'classes/Session.class.php';
 
 if(isset($_SESSION['id'])){
-	header("Location:index");
+	header("Location:index.php");
 	exit();
 }
 
@@ -47,7 +47,7 @@ if(isset($_POST['email'])){
 	$_SESSION['TYP'] = 'REG';
 	$_SESSION['MSG_TYPE'] = 'success';
 
-	header("Location:index");
+	header("Location:index.php");
 	exit();
 
 }  elseif(isset($_POST['code'])){

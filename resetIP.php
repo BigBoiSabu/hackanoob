@@ -77,7 +77,7 @@ if($session->issetLogin()){
             if (!$session->issetMsg()) {
 
                 $pid = $process->getPID($_SESSION['id'], 'RESET_IP', '', 'local', '', $acc, '', 0);
-                header("Location:processes?id=".$pid);
+                header("Location:processes.php?id=".$pid);
 
             } else {
 

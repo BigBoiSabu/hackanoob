@@ -319,7 +319,7 @@ class Internet {
  
                                                                 if ($this->system->issetGet('reset')) {
                                                                     unset($_SESSION['PORT_SCAN']);
-                                                                    header("Location:internet?action=hack&method=xp");
+                                                                    header("Location:internet.php?action=hack&method=xp");
                                                                     exit();
                                                                 }
 
@@ -407,7 +407,7 @@ class Internet {
 
                                                                         unset($_SESSION['XP_HACK']);
                                                                         
-                                                                        header("Location:internet?action=hack&method=xp");
+                                                                        header("Location:internet.php?action=hack&method=xp");
                                                                         
                                                                     }
                                                                 } else {
@@ -690,12 +690,12 @@ if($xpDisable){
 
                                                     $this->session->exp_add('REMOTE_LOGIN', Array($getUser['GET_VALUE'], $getPass['GET_VALUE'], $crcInfo['0']['softversion'], $pecInfo['0']['softversion']));
                                                     
-                                                    header("Location:internet");
+                                                    header("Location:internet.php");
                                                     exit();
 
                                                     break;
                                                 case '2': //pass doesnt match
-                                                    $this->system->handleError('WRONG_PASS', 'internet?action=login');
+                                                    $this->system->handleError('WRONG_PASS', 'internet.php?action=login');
                                                     break;
                                                 case '3': //diferent login (other than root, prob exploit)
 
@@ -784,7 +784,7 @@ if($xpDisable){
 
                                                     $this->session->exp_add('REMOTE_LOGIN', Array($getUser['GET_VALUE'], $getPass['GET_VALUE'], $exploitVersion['0']['softversion'], $softInfoHacked['0']['softversion']));
                       
-                                                    header("Location:internet");
+                                                    header("Location:internet.php");
                                                     exit();
 
                                                     break;
@@ -882,7 +882,7 @@ if($xpDisable){
                                                             
                                                             $this->session->exp_add('REMOTE_LOGIN', Array($user, $getPass['GET_VALUE'], $ftpExp['0']['softversion'] + $sshExp['0']['softversion'], $softInfoHacked['0']['softversion']));
                                                             
-                                                            header("Location:internet");
+                                                            header("Location:internet.php");
                                                             exit();
                                                                                                                         
                                                         }
@@ -913,7 +913,7 @@ if($xpDisable){
 
                                                     $this->session->exp_add('REMOTE_LOGIN', Array('download'));
                                                     
-                                                    header("Location:internet");
+                                                    header("Location:internet.php");
                                                     exit();
                                                     
                                                     break;
@@ -937,7 +937,7 @@ if($xpDisable){
 
                                                     $this->session->exp_add('REMOTE_LOGIN', Array('clan'));
                                                     
-                                                    header("Location:internet");
+                                                    header("Location:internet.php");
                                                     exit();
                                                     
                                                     break;
@@ -999,7 +999,7 @@ if($xpDisable){
                                                             }
                                                         }
 
-                                                        header("Location:internet?bAction=show");
+                                                        header("Location:internet.php?bAction=show");
                                                         exit();
                                                         
                                                     } else {
@@ -1122,7 +1122,7 @@ if($xpDisable){
                             
                         } else {
 
-                            header("Location:internet");
+                            header("Location:internet.php");
                             exit();
                             
                         }
@@ -1537,7 +1537,7 @@ if($xpDisable){
 
                             } else {
 
-                                header("Location:internet");
+                                header("Location:internet.php");
                                 exit();
 
                             }
@@ -1601,7 +1601,7 @@ if($xpDisable){
                                         
                             } else {
                                 
-                                header("location:internet");
+                                header("location:internet.php");
                                 exit();
                                 
                             }
@@ -1685,11 +1685,11 @@ if($xpDisable){
                         exit("Invalid ip address");
                     }
                     
-                    header("Location:internet?ip=".$redirectInfo['GET_VALUE']);
+                    header("Location:internet.php?ip=".$redirectInfo['GET_VALUE']);
                     exit();
                 } else {
                 
-                    header("Location:internet");
+                    header("Location:internet.php");
                     exit();
 
                 }
@@ -1746,7 +1746,7 @@ if($xpDisable){
                                 } else {
 
                                     $this->session->addMsg('Choose server to upgrade.', 'error');
-                                    header("Location:internet?view=clan");
+                                    header("Location:internet.php?view=clan");
                                     
                                 }
                                 
@@ -1784,7 +1784,7 @@ if($xpDisable){
                                     
                                     $this->session->deleteBankSession();
 
-                                    header("Location:internet");
+                                    header("Location:internet.php");
                                     exit();
 
                                     break;
@@ -1960,7 +1960,7 @@ if($xpDisable){
             
             $this->session->deleteInternetSession();
             
-            header("Location:internet");
+            header("Location:internet.php");
             exit();
             
         }
@@ -2076,7 +2076,7 @@ if($xpDisable){
         
         if($redirect == 1){
             
-            header("Location:internet?ip=".long2ip($ip));
+            header("Location:internet.php?ip=".long2ip($ip));
             exit();
             
         }
@@ -2623,7 +2623,7 @@ if($xpDisable){
             
             if ($this->session->isInternetLogged() == TRUE && $ip == $_SESSION['LOGGED_IN']) {
 
-                header("Location:internet");
+                header("Location:internet.php");
                 
             } else {
 

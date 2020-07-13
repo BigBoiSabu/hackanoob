@@ -1,43 +1,43 @@
 <?php
 
-//$fbServerURL = 'http://hackanoob.net/';
-/*
+$fbServerURL = 'http://localhost:3000/';
+
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'hackanoob.net'){
-        $fbServerURL = 'http://hackanoob.net/';
+    if($_SERVER['HTTP_HOST'] == 'localhost:3000'){
+        $fbServerURL = 'http://localhost:3000/';
     } elseif($_SERVER['HTTP_HOST'] == 'hackanoob.net'){
         $fbServerURL = 'http://hackanoob.net/';
     }
 }
-*/
+
 $l = 'en_US';
 
 if(isset($_SERVER['HTTP_HOST'])){
-    if($_SERVER['HTTP_HOST'] == 'hackanoob.net' || $_SERVER['HTTP_HOST'] == 'www.hackanoob.net'){
+    if($_SERVER['HTTP_HOST'] == 'localhost:3000' || $_SERVER['HTTP_HOST'] == 'www.localhost:3000'){
         $l = 'en_US';
     }
 }
 
 //added to avoid the error from the bindtextdomain shit
-function _($str) {
-    return $str;
-}
+//function _($str) {
+//    return $str;
+//}
 
-//putenv("LANG=" . $l);
-//setlocale(LC_ALL, $l);
+putenv("LANG=" . $l);
+setlocale(LC_ALL, $l);
 
-//$domain = "messages";
-//bindtextdomain($domain, "locale");
-//bind_textdomain_codeset($domain, 'UTF-8');
+$domain = "messages";
+bindtextdomain($domain, "locale");
+bind_textdomain_codeset($domain, 'UTF-8');
 
-//textdomain($domain);
+textdomain($domain);
 
-/*
+
 require_once 'twitter/twitteroauth.php';
 require_once 'classes/Facebook.class.php';
 
 switch($fbServerURL){
-    case 'http://hackanoob.net/':
+    case 'http://localhost:3000/':
         $appID = 0;
         $appSecret = 'REDACTED';
         break;
@@ -49,9 +49,9 @@ switch($fbServerURL){
         $appID = 0;
         $appSecret = 'REDACTED';
         break;
-}*/
+}
 
-/*
+
 $facebook = new Facebook(array(
     'appId' => $appID,
     'secret' => $appSecret,
@@ -66,19 +66,19 @@ $facebookURL = $facebook->getLoginUrl(Array(
 
 $twitteroauth = new TwitterOAuth('REDACTED', 'REDACTED');
 $twitteroauth->host = "https://api.twitter.com/1.1/";
-*/
 
-//if($_SERVER['HTTP_HOST'] == 'www.hackanoob.net' || $_SERVER['HTTP_HOST'] == 'hackanoob.net'){
-//    $url = 'http://hackanoob.net/';
-//} else {
-//    $url = 'http://127.0.0.1/';
-//}
-$url = 'http://hackanoob.net/';
 
-//$request_token = $twitteroauth->getRequestToken($url);
+if($_SERVER['HTTP_HOST'] == 'www.localhost:3000' || $_SERVER['HTTP_HOST'] == 'localhost:3000'){
+    $url = 'http://localhost:3000/';
+} else {
+    $url = 'http://127.0.0.1/';
+}
+$url = 'http://localhost:3000/';
 
-//$twitterURL = '';
-/*
+$request_token = $twitteroauth->getRequestToken($url);
+
+$twitterURL = '';
+
 if($request_token){
 
     $_SESSION['oauth_token'] = $request_token['oauth_token'];
@@ -87,15 +87,15 @@ if($request_token){
     if($twitteroauth->http_code==200){
         $twitterURL = $twitteroauth->getAuthorizeURL($request_token['oauth_token']);
     } else {
-        echo 'Error while connecting to twitter';
+        //echo 'Error while connecting to twitter';
         //TODO: report
     }
 
-} elseif($url == 'http://hackanoob.net/'){
-    echo 'Error while connecting to twitter';
+} elseif($url == 'http://localhost:3000/'){
+    //echo 'Error while connecting to twitter';
     //TODO: report instead of echo
 }
-*/
+
 
 $script = $msgRegister = $msgLogin = $msgIndex = FALSE;
 
@@ -138,63 +138,38 @@ if(isset($_SESSION['TYP'])){
         <meta name="description" content="HackanooB is an online hacking simulation game based on Hacker Experience legacy code. Play as a hacker seeking fame and money. Join now for free.">
         <meta name="keywords" content="HackanooB, hack a noob, hacker, hacker game, hacking simulation, online hacker game, browser game, pbbg, hacker experience legacy, computer science game, programming game" />
         <!--<meta name="google-site-verification" content="mHONAFYPI5E0WSX_C4oX4SX5dPGss2EPzm5kXChRrC3" />-->
-<!--<?php if(!isset($_GET['fb_locale']) || ($_GET['fb_locale'] != 'pt_BR')){ ?>-->
+<?php if(!isset($_GET['fb_locale']) || ($_GET['fb_locale'] != 'pt_BR')){ ?>
         <meta property="og:locale" content="en_US">
         <meta property="og:locale:alternate" content="pt_BR">
         <meta property="og:title" content="Hacker Experience"/>
-        <meta property="og:image" content="https://hackanoob.net/images/og.png"/>
-        <meta property="og:url" content="https://hackanoob.net/"/>
+        <meta property="og:image" content="https://localhost:3000/images/og.png"/>
+        <meta property="og:url" content="https://localhost:3000/"/>
         <meta property="og:description" content="HackanooB is a browser-based hacking simulation game based on Hacker Experience legacy code, where you play the role of a hacker seeking money and power. Join now!"/>
-<!--<?php } elseif ($_GET['fb_locale'] == 'pt_BR'){ ?>
+<?php } elseif ($_GET['fb_locale'] == 'pt_BR'){ ?>
         <meta property="og:locale" content="pt_BR">
         <meta property="og:locale:alternate" content="en_US">
         <meta property="og:title" content="Hacker Experience"/>
-        <meta property="og:image" content="https://hackanoob.net/images/ogbr.png"/>
-        <meta property="og:url" content="https://hackanoob.net/"/>
+        <meta property="og:image" content="https://localhost:3000/images/ogbr.png"/>
+        <meta property="og:url" content="https://localhost:3000/"/>
         <meta property="og:description" content="Hacker Experience é um browser-game de simulação de hacking, onde você assume o papel de um hacker buscando dinheiro e poder. Cadastre-se agora!"/>
-<?php } ?>-->
+<?php } ?>
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
         <link href="css/he_index.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/tipTip.css">
-        <!--<script type="text/javascript">
-        var fbid = "<?php echo $appID; ?>";     
-        </script>-->
+        <script type="text/javascript">
+            var fbid = "<?php echo $appID; ?>";     
+        </script>
 <?php echo $script; ?>
     </head>
     
     <body>
     
     
-    <!-- added main oauth code for facebook integration -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '{your-app-id}',
-          cookie     : true,
-          xfbml      : true,
-          version    : '{api-version}'
-        });
-          
-        FB.AppEvents.logPageView();   
-          
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!-- end of main oauth code for fb integration -->
-
-
         <div id="terminal"></div>
         <div class="intro-header">
         
-<!-- REMOVED LANGUAGE SELECTOR --            
+
             <div id="lang_selector">
                 <dl id="sample" class="dropdown">
                     
@@ -212,13 +187,13 @@ if($l == 'pt_BR'){
                     <dt><a href="#"><span><img class="flag" src="images/<?php echo $current; ?>.png" alt="" /></span></a></dt>
                     <dd>
                         <ul>
-                            <li><a href="https://hackanoob.net/"><img class="flag" src="images/en.png" alt="" /> English</a></li>
-                            <li><a href="https://hackanoob.net/"><img class="flag" src="images/pt.png" alt="" /> Português</a></li>
+                            <li><a href="https://localhost:3000/"><img class="flag" src="images/en.png" alt="" /> English</a></li>
+                            <li><a href="https://localhost:3000/"><img class="flag" src="images/pt.png" alt="" /> Português</a></li>
                         </ul>
                     </dd>
                 </dl>
             </div>
--->
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -259,7 +234,7 @@ if($msgIndex){
                                 <li><a id="fb-login" value="<?php echo $facebookURL; ?>" class="btn btn-default btn-lg btn-login" style="background-color: #3B5998; color: #fff;"><i class="fa fa-facebook-square fa-fw"></i> <span><?php echo _('Facebook login'); ?></span></a></li>
                                 <li><a id="tt-login" value="<?php echo $twitterURL; ?>" class="btn btn-default btn-lg btn-login" style="background-color: #00acee; color: #fff;"><i class="fa fa-twitter fa-fw"></i> <span><?php echo _('Twitter login'); ?></span></a></li>
                             </ul><br/><br/>
-                            <div style="margin-left: 10px"><a href="reset"><?php echo _('I forgot my password.'); ?></a></div>
+                            <div style="margin-left: 10px"><a href="reset.php"><?php echo _('I forgot my password.'); ?></a></div>
                             <div style="margin-left: 10px; margin-top: 5px"><a class="goto-signup link"><?php echo _('I don\'t have an account.'); ?></a></div>
                         </p>
                     </div>
@@ -274,7 +249,7 @@ if($msgLogin){
 }
 ?>
                         <div id="container">
-                            <form id="login-form" action="login" method="POST">
+                            <form id="login-form" action="login.php" method="POST">
                                 <label for="username"><?php echo _('Username'); ?>:</label>
                                 <input class="login-input" type="text" id="login-username" name="username">
                                 <label for="password"><?php echo _('Password'); ?>:</label>
@@ -368,7 +343,7 @@ if($msgRegister){
 <?php
 }
 ?>
-                        <form class="form-horizontal" id="signup-form" action="register" method="POST">
+                        <form class="form-horizontal" id="signup-form" action="register.php" method="POST">
                             <fieldset class="signup">
                                 <br/>
                                 <div class="form-group">
@@ -444,7 +419,7 @@ if($msgRegister){
                             <p><?php echo _('Here comes a <a href="http://www.paulgraham.com/gba.html">looong discussion</a>. Many believe the word <em>hacker</em> should designate the so-called white hat (talented programmer, or an ethical hacker). Others, assume it to mean criminals behind the screen.'); ?></p>
                             <p><?php echo _('<a href="http://duartes.org/gustavo/blog/post/first-recorded-usage-of-hacker/">History has shown us</a> that maybe it really was meant to define the bad guys, however we do believe that hacker means <a href="https://stallman.org/articles/on-hacking.html">way more</a> than that.'); ?></p>
                             <p><?php echo _('Regardless of definition, we want our users to enjoy the game, whether they call it Hacker or Cracker Experience. That\'s it, name whatever you want.'); ?></p>
-                            <p><?php echo _('Meanwhile, we have a special <a href="https://forum.hackanoob.net/">board designated to teach computer science and programming</a> for people. Instead of engaging into useless flame wars, feel free to join and share your knowledge to others. I\'d call <em>that</em> hacker :)'); ?></p>
+                            <p><?php echo _('Meanwhile, we have a special <a href="https://forum.localhost:3000/">board designated to teach computer science and programming</a> for people. Instead of engaging into useless flame wars, feel free to join and share your knowledge to others. I\'d call <em>that</em> hacker :)'); ?></p>
                         </div>                          
                     </div>
                     <div class="faq-buttons-intro">
@@ -463,10 +438,10 @@ if($msgRegister){
                 <div id="navigate" class="three columns">
                     <h5 class="footer-title"><?php echo _('NAVIGATE'); ?></h5>
                     <ul>
-                        <li><a target="__blank" href="privacy" class="scroll"><?php echo _('PRIVACY'); ?></a></li>
-                        <li><a href="http://status.hackanoob.net/" class="scroll">STATUS</a></li>
-                        <li><a href="http://forum.hackanoob.net/" class="scroll"><?php echo _('FORUM'); ?></a></li>
-                        <li><a href="http://wiki.hackanoob.net/" class="scroll">WIKI</a></li>
+                        <li><a target="__blank" href="privacy.php" class="scroll"><?php echo _('PRIVACY'); ?></a></li>
+                        <li><a href="http://status.localhost:3000/" class="scroll">STATUS</a></li>
+                        <li><a href="http://forum.localhost:3000/" class="scroll"><?php echo _('FORUM'); ?></a></li>
+                        <li><a href="http://wiki.localhost:3000/" class="scroll">WIKI</a></li>
                     </ul>
                 </div>
                 <div id="legal-disclaimer" class="three columns">
@@ -479,7 +454,7 @@ if($msgRegister){
                 <div id="contact" class="four columns text-right">
                     <h5 class="footer-title"><?php echo _('CONTACT US'); ?></h5>
                     <div class="mail-link">
-                        <a href="http://www.hackanoob.net/contact"><i class="fa fa-home"></i>www.hackanoob.net/contact</a><br/>
+                        <a href="http://www.localhost:3000/contact"><i class="fa fa-home"></i>www.localhost:3000/contact</a><br/>
                         <a href="mailto:<?php echo _('contact@hackanoob.net'); ?>"><i class="fa fa-envelope-o"></i><?php echo _('contact@hackanoob.net'); ?></a><br/>
                     </div>
                     <div class="footer-social">

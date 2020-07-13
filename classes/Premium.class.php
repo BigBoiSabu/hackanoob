@@ -20,7 +20,7 @@ class Premium {
         $redirect = 'premium';
         
         if(self::playerHasPayment()){
-            $system->handleError('There already is a payment of yours being processed. For safety reasons we won\'t accept this new one. If you think this is an error, mail us at contact@hackerexperience.com', $redirect);
+            $system->handleError('There already is a payment of yours being processed. For safety reasons we won\'t accept this new one. If you think this is an error, mail us at contact@hackanoob.net', $redirect);
         }
         
         if(!isset($_SERVER['QUERY_STRING'])){
@@ -100,7 +100,7 @@ class Premium {
         }
                 
         $this->session->addMsg('Congratulations, the order was submit. We are now processing it and you should soon receive an confirmation email.', 'notice');
-        header("Location:index");
+        header("Location:index.php");
         exit();
 
     }
@@ -208,7 +208,7 @@ class Premium {
         require 'SES.class.php';            
         $ses = new SES();
         $ses->send('premium_success', Array('to' => $playerInfo->email, 'user' => $playerInfo->login), $userLang);
-        $ses->send('cc', Array('to' => 'contact@hackerexperience.com',  'id' => $id));
+        $ses->send('cc', Array('to' => 'contact@hackanoob.net',  'id' => $id));
         
         require 'Social.class.php';
         $social = new Social();
@@ -218,7 +218,7 @@ class Premium {
         
         if($report){
             
-            $ses->send('price_mismatch', Array('to' => 'contact@hackerexperience.com',  'id' => $id), '');
+            $ses->send('price_mismatch', Array('to' => 'contact@hackanoob.net',  'id' => $id), '');
                     
         }
         
@@ -226,11 +226,11 @@ class Premium {
     
     public function refused($id, $reason){
         
-//        $sql = 'SELECT userID, info, plan, paid FROM payments WHERE id = :id LIMIT 1';
-//        $stmt = $this->pdo->prepare($sql);
-//        $stmt->execute(array(':id' => $id));
-//        $orderInfo = $stmt->fetch(PDO::FETCH_OBJ);
-//        self::getPlanInfo($orderInfo->plan);
+        $sql = 'SELECT userID, info, plan, paid FROM payments WHERE id = :id LIMIT 1';
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(array(':id' => $id));
+        $orderInfo = $stmt->fetch(PDO::FETCH_OBJ);
+        self::getPlanInfo($orderInfo->plan);
         
         $price = $_POST['mc_gross'];
         $report = FALSE;
@@ -280,9 +280,8 @@ class Premium {
         $sqlSelect = "SELECT lang FROM users_language WHERE userID = $id LIMIT 1";
         $userLang = $this->pdo->query($sqlSelect)->fetch(PDO::FETCH_OBJ)->lang;
         
-        TODO
     }
-    
+
     public function playerHasPayment($uid = ''){
         
         if($uid == ''){
@@ -404,7 +403,7 @@ class Premium {
                     - <?php echo _('All information is sent securely via SSL.'); ?><br/>
                     - <?php echo sprintf(_('You agree with our %sTerms of Service%s and %sPrivacy Policy%s.'), '<a href="legal">', '</a>', '<a href="legal?show=privacy">', '</a>'); ?>
                     <br/>
-                    <?php echo _('Questions? Drop us an email at ')._('contact@hackerexperience.com'); ?>
+                    <?php echo _('Questions? Drop us an email at ')._('contact@hackanoob.net'); ?>
                 </div>
             </div>
                 
@@ -854,7 +853,7 @@ class Premium {
                             <div class="widget-content">
                                 <?php echo _('That\'s right, we accept Bitcoin! The price is the same (converted from USD to BTC).'); ?>
                                  <br/><br/>
-                                <?php echo _('The bitcoin payment gateway is not ready yet. Please send an email to ')._('contact@hackerexperience.com')._(' so we can send the instructions on how to perform the payment.'); ?>
+                                <?php echo _('The bitcoin payment gateway is not ready yet. Please send an email to ')._('contact@hackanoob.net')._(' so we can send the instructions on how to perform the payment.'); ?>
                                  
                             </div>
                         </div>

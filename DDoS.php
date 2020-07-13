@@ -7,7 +7,7 @@ $error = '';
 
 if(!$session->issetLogin()){
     
-    header("Location:index");
+    header("Location:index.php");
     exit();
     
 }
@@ -61,18 +61,18 @@ if($error == ''){
                 if($process->newProcess($_SESSION['id'], 'DDOS', $playerInfo['0']['id'], 'remote', '', '', '', $isNPC)){
 
                     $session->addMsg(sprintf(_('DDoS attack against <strong>%s</strong> launched.'), $_POST['ip']), 'notice');
-                    header("Location:list?action=ddos");
+                    header("Location:list.php?action=ddos");
 
                 } else {
 
                     if (!$session->issetMsg()) {
 
                         $pid = $process->getPID($_SESSION['id'], 'DDOS', $playerInfo['0']['id'], 'remote', '', '', '', $isNPC);
-                        header("Location:processes?id=".$pid);
+                        header("Location:processes.php?id=".$pid);
 
                     } else {
 
-                        header("Location:list?action=ddos");
+                        header("Location:list.php?action=ddos");
 
                     }            
 
@@ -80,27 +80,27 @@ if($error == ''){
             
             } else {
                 $session->addMsg('You need to have at least 3 working DDoS viruses.', 'error');
-                header("Location:list?action=ddos");
+                header("Location:list.php?action=ddos");
             }
 
         } else {
 
             $session->addMsg('This IP is not on your Hacked Database.', 'error');
-            header("Location:list?action=ddos");
+            header("Location:list.php?action=ddos");
 
         }
     
     } else {
 
         $session->addMsg('This IP doesnt exists.', 'error');
-        header("Location:list?action=ddos");
+        header("Location:list.php?action=ddos");
         
     }
     
 } else {
     
     $session->addMsg($error, 'error');
-    header("Location:list?action=ddos");    
+    header("Location:list.php?action=ddos");    
     
 }
 

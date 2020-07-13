@@ -71,7 +71,7 @@ if($gotGet == '2'){ //existe get
                     if($process->newProcess($_SESSION['id'], 'D_LOG', '', 'local', '', $getIDInfo['GET_VALUE'], '', '0')){
 
                         $pid = $session->processID('show');
-                        header("Location:processes?pid=$pid");
+                        header("Location:processes.php?pid=$pid");
 
                     } else { //provavelmente já existe a ação pra del
 

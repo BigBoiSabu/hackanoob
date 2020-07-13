@@ -87,7 +87,7 @@ class Player {
 
                     $this->session->addMsg('Process to reset password started.', 'notice');
                     
-                    header("Location:processes");
+                    header("Location:processes.php");
                     exit();
 
                 } else {
@@ -95,7 +95,7 @@ class Player {
                     $this->session->addMsg('There already is a password reset process.', 'error');
 
                     $pid = $process->getPID($_SESSION['id'], 'RESET_PWD', '', 'local', '', $acc, '', 0);
-                    header("Location:processes?id=".$pid);
+                    header("Location:processes.php?id=".$pid);
                     exit();
 
                 }
@@ -1797,7 +1797,7 @@ $news->listIndex(3);
                             <div class="widget-content">
                                 <?php echo _('We are sad to hear you want to leave. You can delete your account at anytime, however there is no automatic way to do this for now.'); ?>
                                 <br/>
-                                    <?php echo _('Please drop us an email at ')._('contact@hackerexperience.com')._(' asking us to remove your account. If possible, let us know why you are leaving.'); ?>
+                                    <?php echo _('Please drop us an email at ')._('contact@hackanoob.net')._(' asking us to remove your account. If possible, let us know why you are leaving.'); ?>
                                 <br/>
                                 <?php echo _('A verification e-mail will be sent to you.'); ?>
                             </div>
