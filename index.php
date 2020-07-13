@@ -27,11 +27,11 @@ if(!isset($_SESSION['id'])){
     
     if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['code']) || isset($_SESSION['FBLOGIN'])){
                 
-        $fbServerURL = 'http://localhost:3000/';
+        $fbServerURL = 'http://192.168.8.68:4000/';
 
         if(isset($_SERVER['HTTP_HOST'])){
-            if($_SERVER['HTTP_HOST'] == 'localhost:3000'){
-                $fbServerURL = 'http://localhost:3000/';
+            if($_SERVER['HTTP_HOST'] == '192.168.8.68:4000'){
+                $fbServerURL = 'http://192.168.8.68:4000/';
             } elseif($_SERVER['HTTP_HOST'] == 'hackanoob.net'){
                 $fbServerURL = 'http://hackanoob.net/';
             }
@@ -39,7 +39,7 @@ if(!isset($_SESSION['id'])){
         
         // 2019: Update the links, the appId and the appSecret below in order to enable FB login
         switch($fbServerURL){
-            case 'http://localhost:3000/':
+            case 'http://192.168.8.68:4000/':
                 $appID = 0;
                 $appSecret = 'REDACTED';
                 break;
@@ -47,10 +47,10 @@ if(!isset($_SESSION['id'])){
                 $appID = 0;
                 $appSecret = 'REDACTED';
                 break;
-            /*case 'http://hackanoob.net/':
+            case 'http://hackanoob.net/':
                 $appID = 0;
                 $appSecret = 'REDACTED';
-                break;*/
+                break;
         }
                 
         $facebook = new Facebook(array(
