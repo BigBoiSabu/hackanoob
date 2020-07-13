@@ -3,7 +3,7 @@
 session_start();
 
 require 'classes/Session.class.php';
-//$session = new Session();
+$session = new Session();
 
 $result = Array();
 $result['status'] = 'ERROR';
@@ -29,7 +29,7 @@ if($session->issetLogin() || $loggedOut){
     
         // 2019: Sorry, no idea what I had in mind below
         //TESTE!!!! RETIRAR \/ (COMENTÁRIO OU A LINHA)
-        //require 'template/gameHeader.php'; //TODO: is it really needed? (perhaps for set_time, but..)
+        require 'template/gameHeader.php'; //TODO: is it really needed? (perhaps for set_time, but..)
     
     }
 
