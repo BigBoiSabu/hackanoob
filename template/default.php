@@ -81,8 +81,8 @@ $twitterURL = '';
 
 if($request_token){
 
-    $_SESSION['oauth_token'] = $request_token['oauth_token'];
-    $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
+    //$_SESSION['oauth_token'] = $request_token['oauth_token'];
+    //$_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
 
     if($twitteroauth->http_code==200){
         $twitterURL = $twitteroauth->getAuthorizeURL($request_token['oauth_token']);
@@ -91,7 +91,7 @@ if($request_token){
         //TODO: report
     }
 
-} elseif($url == 'http://192.168.8.68:4000/'){
+//} elseif($url == 'http://192.168.8.68:4000/'){
     //echo 'Error while connecting to twitter';
     //TODO: report instead of echo
 }

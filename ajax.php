@@ -3,7 +3,7 @@
 session_start();
 
 require 'classes/Session.class.php';
-//$session = new Session();
+$session = new Session();
 
 $result = Array();
 $result['status'] = 'ERROR';

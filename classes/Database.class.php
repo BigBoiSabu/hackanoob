@@ -320,7 +320,7 @@ class LRSys {
         }
         
         require_once 'RememberMe.class.php';
-        $key = pack("H*", 'REDACTED');
+        $key = pack("H*", '28b146835c923b91a78a03dd9bf16a77');
         $rememberMe = new RememberMe($key, $this->pdo);
         $rememberMe->remember($id, false, $this->keepalive);
                 

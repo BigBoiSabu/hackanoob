@@ -763,7 +763,7 @@ switch($crudePage){
                     
 }
 
-//$_SESSION['MISSION_TYPE'] = 82;
+$_SESSION['MISSION_TYPE'] = 82;
 if(isset($_SESSION['MISSION_ID'])){
     if($_SESSION['MISSION_TYPE'] >= 80){
         $bodyClass .= ' tutorial';
