@@ -48,7 +48,7 @@ switch($fbServerURL){
     /*case 'http://hackanoob.net/':
         $appID = 0;
         $appSecret = 'REDACTED';
-        break;*/
+        break; */
 }
 
 
