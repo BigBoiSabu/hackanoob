@@ -96,7 +96,7 @@ while($total > 0){
             if($victimGrant){
          
                 for($i = 0; $i < sizeof($starterArr); $i++){
-                    exec('/usr/bin/env python /var/www/python/badge_add.py user '.$starterArr[$i].' 62'); // CHANGE TO ABSOLUTE GAME PATH
+                    exec('/usr/bin/env python /home/elite/hackanoob/python/badge_add.py user '.$starterArr[$i].' 62'); // CHANGE TO ABSOLUTE GAME PATH
                 }
 
                 $duration = 2;

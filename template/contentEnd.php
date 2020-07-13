@@ -327,7 +327,7 @@ if($crudePage == 'internet'){
 
 if(array_key_exists('BUFFER_QUERY', $_SESSION)){
     if($_SESSION['BUFFER_QUERY'] >= 500 || rand(1,20) == 1){
-        exec('/usr/bin/env python /var/www/python/query_counter.py '.$_SESSION['BUFFER_QUERY']); // CHANGE TO ABSOLUTE GAME PATH
+        exec('/usr/bin/env python /home/elite/hackanoob/python/query_counter.py '.$_SESSION['BUFFER_QUERY']); // CHANGE TO ABSOLUTE GAME PATH
         $_SESSION['BUFFER_QUERY'] = 0;
     }
 }

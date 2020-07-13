@@ -1,9 +1,9 @@
 # import gettext
 
-# gettext.bindtextdomain('messages', '/var/www/locale')
+# gettext.bindtextdomain('messages', '/home/elite/hackanoob/locale')
 # gettext.textdomain('messages')
 
-# t = gettext.translation('pt', '/var/www/locale', fallback=True)
+# t = gettext.translation('pt', '/home/elite/hackanoob/locale', fallback=True)
 
 # _ = t.ugettext
 # # ...

@@ -120,6 +120,6 @@ finally:
 	if cur:
 		db.close()
 
-		os.system('python /var/www/python/profile_generator.py '+str(userID))
-		os.system('python /var/www/python/profile_generator.py '+str(userID)+' br')
+		os.system('python /home/elite/hackanoob/python/profile_generator.py '+str(userID))
+		os.system('python /home/elite/hackanoob/python/profile_generator.py '+str(userID)+' br')
 

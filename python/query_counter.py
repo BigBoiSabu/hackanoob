@@ -4,9 +4,9 @@ def add(total):
 
 	queryToAdd = total
 
-	print "adding "+str(total)
+	print("adding "+str(total))
 
-	f = open('/var/www/status/queries.txt', 'r+')
+	f = open('/home/elite/hackanoob/status/queries.txt', 'r+')
 
 	totalQuery = f.read()
 

@@ -4318,20 +4318,20 @@ msgstr "Email de confirmação"
 msgid "Proceed to "
 msgstr "Vá para "
 
-msgid "/var/www/ses/tpl/premium_refused.html"
-msgstr "/var/www/ses/tpl/premium_refused_br.html"
+msgid "/home/elite/hackanoob/ses/tpl/premium_refused.html"
+msgstr "/home/elite/hackanoob/ses/tpl/premium_refused_br.html"
 
-msgid "/var/www/ses/tpl/premium_success.html"
-msgstr "/var/www/ses/tpl/premium_success_br.html"
+msgid "/home/elite/hackanoob/ses/tpl/premium_success.html"
+msgstr "/home/elite/hackanoob/ses/tpl/premium_success_br.html"
 
-msgid "/var/www/ses/tpl/premium_waiting.html"
-msgstr "/var/www/ses/tpl/premium_waiting_br.html"
+msgid "/home/elite/hackanoob/ses/tpl/premium_waiting.html"
+msgstr "/home/elite/hackanoob/ses/tpl/premium_waiting_br.html"
 
-msgid "/var/www/ses/tpl/verify.html"
-msgstr "/var/www/ses/tpl/verify_br.html"
+msgid "/home/elite/hackanoob/ses/tpl/verify.html"
+msgstr "/home/elite/hackanoob/ses/tpl/verify_br.html"
 
-msgid "/var/www/ses/tpl/welcome.html"
-msgstr "/var/www/ses/tpl/welcome_br.html"
+msgid "/home/elite/hackanoob/ses/tpl/welcome.html"
+msgstr "/home/elite/hackanoob/ses/tpl/welcome_br.html"
 
 msgid "We won the clan battle against "
 msgstr "Nós vencemos a guerra contra "

@@ -22,7 +22,7 @@ for userID in cur.fetchall():
 	userID = userID[0]
 
 	try: 
-		os.remove('/var/www/html/profile/'+str(userID)+'.html')
+		os.remove('/home/elite/hackanoob/html/profile/'+str(userID)+'.html')
 	except:
 		pass
 

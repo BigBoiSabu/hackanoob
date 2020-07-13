@@ -10,7 +10,7 @@ for roundID in cur.fetchall():
 
 	# 2019: NPCs need to be generated BEFORE newroundupdater
 	#NPCs precisam ser gerados ANTES do newroundupdater
-	os.system('python /var/www/python/npc_generator.py')
+	os.system('python /home/elite/hackanoob/python/npc_generator.py')
 
 	import random
 	import string
@@ -96,8 +96,8 @@ for roundID in cur.fetchall():
 	cur.execute("INSERT INTO round_stats (id) VALUES (%s)", str(roundID[0]))
 
 
-	os.system('python /var/www/cron2/updateRanking.py')
-	os.system('python /var/www/python/rank_generator.py')
+	os.system('python /home/elite/hackanoob/cron2/updateRanking.py')
+	os.system('python /home/elite/hackanoob/python/rank_generator.py')
 
 	title = 'Round #'+str(roundID[0])+' started'
 	content = 'Ye\'all, get ready to hack! Round '+str(roundID[0])+' just started.'

@@ -53,7 +53,7 @@ def save(html, rank, page, curRound):
 	else:
 		string = 'preview'
 
-	f = open('/var/www/html/fame/'+curRound+'_'+rank+'_'+string+'.html', 'w')
+	f = open('/home/elite/hackanoob/html/fame/'+curRound+'_'+rank+'_'+string+'.html', 'w')
 	f.write(html)
 	f.close()
 

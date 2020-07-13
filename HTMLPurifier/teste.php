@@ -1,5 +1,5 @@
 <?php
 
-require '/var/www/classes/'
+require '/home/elite/hackanoob/classes/'
 
 ?>

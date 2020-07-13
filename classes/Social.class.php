@@ -44,7 +44,7 @@ class Social {
         //}
         
         $generate = FALSE;
-        //if(file_exists('/var/www/html/profile/'.$id.'_'.$l.'.html')){ // CHANGED TO GAME ABSOLUTE PATH (BELOW)
+        //if(file_exists('/home/elite/hackanoob/html/profile/'.$id.'_'.$l.'.html')){ // CHANGED TO GAME ABSOLUTE PATH (BELOW)
         if(file_exists('/home/bipolarmorgan/public_html/profile/'.$id.'_'.$l.'.html')){ 
             if(!self::isProfileValid()){
                 $generate = TRUE;

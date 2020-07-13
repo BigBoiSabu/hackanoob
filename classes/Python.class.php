@@ -12,7 +12,7 @@ class Python {
     function __construct(){
         
         $this->python_path = '/usr/bin/env python';
-        $this->game_path = '/var/www/'; // CHANGE TO YOUR ABSOLUTE GAME PATH
+        $this->game_path = '/home/elite/hackanoob/'; // CHANGE TO YOUR ABSOLUTE GAME PATH
         $this->args = '';
         $this->log = ' 2>&1 /var/log/game/python.log';
         

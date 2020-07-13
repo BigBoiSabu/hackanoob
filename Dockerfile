@@ -16,9 +16,9 @@ COPY config/php.ini /etc/php7/conf.d/zzz_custom.ini
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # wp-content volume
-VOLUME /var/www
-WORKDIR /var/www
-RUN chown -R nobody.nobody /var/www
+VOLUME /home/elite
+WORKDIR /home/elite
+RUN chown -R nobody.nobody /home/elite
 
 COPY . .
 

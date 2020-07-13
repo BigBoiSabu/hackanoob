@@ -6,7 +6,7 @@ import string
 db = MySQLdb.connect(host="localhost",user="he",passwd="REDADCTED",db="game")
 cur = db.cursor()
 
-json_data = open('/var/www/json/npc.json').read()
+json_data = open('/home/elite/hackanoob/json/npc.json').read()
 npcList = json.loads(json_data)
 
 def ip_generator():
@@ -170,6 +170,6 @@ db.commit()
 #precisa ser por os (e nao subprocess.call) pq npc_generator.py eh chamado de newroundupdater por os
 
 import os
-os.system('python /var/www/python/software_generator.py')
-os.system('python /var/www/python/software_generator_riddle.py')
-os.system('python /var/www/python/npc_generator_web.py')
+os.system('python /home/elite/hackanoob/python/software_generator.py')
+os.system('python /home/elite/hackanoob/python/software_generator_riddle.py')
+os.system('python /home/elite/hackanoob/python/npc_generator_web.py')

@@ -49,9 +49,9 @@ def dotVersion(version):
 def save(html, rank, page, preview = False):
 
 	if preview:
-		path = '/var/www/html/fame/rank_'+rank+'_preview.html'
+		path = '/home/elite/hackanoob/html/fame/rank_'+rank+'_preview.html'
 	else:
-		path = '/var/www/html/ranking/'+rank+'_'+str(page)+'.html'
+		path = '/home/elite/hackanoob/html/ranking/'+rank+'_'+str(page)+'.html'
 
 	f = open(path, 'w')
 	f.write(html)
