@@ -45,10 +45,10 @@ switch($fbServerURL){
         $appID = 0;
         $appSecret = 'REDACTED';
         break;
-    case 'http://hackanoob.net/':
+    /*case 'http://hackanoob.net/':
         $appID = 0;
         $appSecret = 'REDACTED';
-        break;
+        break; */
 }
 
 
@@ -208,7 +208,7 @@ if($msgIndex){
 ?>
                         <div class="intro-message">
                             <h1>HackanooB</h1>
-                            <h3 class="digital"><?php echo _('Cyberspace Under Attack'); ?><span class="a_bebida_que_pisca">_</span></h3>
+                            <h3 class="digital"><?php echo _('War of the Noobz'); ?><span class="a_bebida_que_pisca">_</span></h3>
                             <hr class="intro-divider">
                             <ul class="list-inline intro-social-buttons">
                                 <li><a class="btn btn-default btn-lg btn-front goto-login"><i class="fa fa-power-off fa-fw"></i> <span class="network-name"><?php echo _('Login'); ?></span></a></li>
