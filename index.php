@@ -40,8 +40,8 @@ if(!isset($_SESSION['id'])){
         // 2019: Update the links, the appId and the appSecret below in order to enable FB login
         switch($fbServerURL){
             case 'http://192.168.8.68:4000/':
-                $appID = 296080354875728;
-                $appSecret = '7c7d43152fbf94a7231cf77dfaa37ccf';
+                $appID = 'REMOVED';
+                $appSecret = 'REMOVED';
                 break;
             /*case 'http://hackanoob.net/':
                 $appID = 0;
@@ -129,7 +129,7 @@ if(!isset($_SESSION['id'])){
             require 'twitter/twitteroauth.php';
 
             // Modify `REDACTED` to enable twitter login
-            $twitteroauth = new TwitterOAuth('125795156-Vim25qN5CyWuk6ZYXUW7SsOhbRi5apIFv3xqqncO', 'vZj1Aw6cn2i1qzv5kewtCwunhx8fbjDJE05N0p7Ix5xkL', $_SESSION['oauth_token'], $_SESSION['oauth_token_secret']);
+            $twitteroauth = new TwitterOAuth('REMOVED', 'REMOVED', $_SESSION['oauth_token'], $_SESSION['oauth_token_secret']);
             $twitteroauth->host = "https://api.twitter.com/1.1/";
 
             $access_token = $twitteroauth->getAccessToken($_GET['oauth_verifier']);
